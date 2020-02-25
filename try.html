@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task</title>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="{{url_for('static', filename='fonts/material-icon/css/material-design-iconic-font.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='vendor/jquery-ui/jquery-ui.min.css')}}">
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+  <center><h1><i><b>Schedule-Task</b></h1></i>
+ <form action="http://localhost:5000/success " method="POST">
+    <div class="main">
+        <div class="container">
+            <form id="booking-form" class="booking-form" method="POST">
+               <div class="form-group">
+                    <div class="form-destination">
+                        <label for="destination">Username</label>
+                        <input type="text"  name="txt_user" name="destination" placeholder="Enter Username" required />
+                    </div>
+                    <div class="form-destination">
+                        <label for="destination">Profile</label>
+                        <input type="text"   name="txt_profile" name="destination" placeholder="Enter Profile" required />
+                    </div>
+                    <div class="form-date-from form-icon">
+                        <label for="date_from">Start Date</label>
+                        <input type="text"  name="txt_sd" class="date_from" placeholder="Start date" required />
+                    </div>
+                    <div class="form-date-to form-icon">
+                        <label for="date_to">End Date</label>
+                        <input type="text" name="txt_ed"   class="date_to" placeholder="End date" required />
+                    </div>        
+                <div class="form-submit">
+                         <input type="submit" id="submit" class="submit" value="Submit" />
+                 </div>
+                </form>
+                <div>
+                        <form action="http://localhost:5000/success2 " method="POST">
+                         <input type="submit" id="submit" class="submit" value="View Data"/>
+                        </form>
+               </div>
+            
+        </div>
+    </div>
+    <!-- JS -->
+    <script src="{{url_for('static',filename='vendor/jquery-ui/jquery-ui.min.css')}}"></script>
+    <script src="{{url_for('static',filename=' vendor/jquery-ui/jquery-ui.min.js')}}"></script>
+    <script src="{{ url_for('static',filename='js/main.js')}}"></script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+</html>
